@@ -23,15 +23,15 @@ async function start() {
     app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
     // CORS setup
-    const origins = (process.env.CORS_ORIGINS || '*').split(',');
     app.use(
-      cors({
-        origin: origins,
-        credentials: true,
-        methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
-        allowedHeaders: ['Content-Type', 'Authorization'],
-      })
-    );
+  cors({
+    origin: 'https://schoolpartnr.netlify.app',
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
+app.options('*', cors());
 
     // Mount API
     app.use('/api', apiRoutes);
