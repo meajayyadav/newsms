@@ -107,7 +107,7 @@ export default function Landing() {
                 <School className="text-white" size={28} />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                EduManage
+                School Partner
               </span>
             </div>
             
@@ -122,7 +122,7 @@ export default function Landing() {
                 onClick={() => setShowAuth(true)} 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6"
               >
-                Get Started
+                Login
               </Button>
             </div>
 
